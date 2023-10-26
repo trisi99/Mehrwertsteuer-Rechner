@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehwersteuerrechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <section>
+        <form >
+            <div class="div1">
+                <h3>Was soll berechnet werden?</h3>
+            <input type="radio" name="mwst" id="mwstPlus" onclick="funcOne()">
+            <label for="mwstPlus">Mehrwertsteuer aufschlagen(Netto zu Brutto)</label>
+            <br>
+            <input type="radio" name="mwst" id="mwstMinus" onclick="funcOne()">
+                <label for="mwstMinus">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </div>
+            
+        <div class="div1">
+            <h3>Mehrwertsteuersatz</h3>
+            <label for="19%">19%</label>
+            <input type="radio" name="percent" id="19%"><br>
+            <label for="7%">7%</label>
+            <input type="radio" name="percent" id="7%">
+        </div>
+        <div class="div2">
+            <label for="betrag"><span id="headline"></span>*</label><br>
+            <input type="number" name="betrag" id="betrag" required>
+        </div>
+        
+            <input type="button" value="Berechnen" onclick="funcTwo()" class="button">
+        </form>
+        <h2>Ergebnis</h2>
+        <div class="div3">
+            <h3>Mehrwersteuerbetrag</h3>
+            <p><span id="mwstBetrag"></span>€</p>
+        </div>
+        <div class="div4">
+            <h3 id="headFunc"></h3>
+            <p><span id="price"></span>€</p>
+        </div>
+</section>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
